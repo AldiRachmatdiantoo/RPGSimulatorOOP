@@ -11,12 +11,12 @@ class GameFlow(var player: Player, var enemy: Enemy) {
 
         //enemy unique weapon
         val randomForEnemyWeapon = Random.nextInt(0, unique.size)
-        val getWeaponEnemy = unique[randomForEnemyWeapon]
+        val enemyUniqueItems = unique[randomForEnemyWeapon]
         println("\nKEREN! ANDA MEMILIH $playerUniqueItems!\n")
         print("PRESS ANY KEY TO PLAY")
         readln()
 
-        play()
+        play(playerUniqueItems, enemyUniqueItems)
 
     }
     fun uniqueItemsPlayer(unique: MutableList<String>): String{
@@ -34,7 +34,14 @@ class GameFlow(var player: Player, var enemy: Enemy) {
             }
         }
     }
-    fun play(){
-        println("GACOR")
+    fun play(playerWeapon: String, enemyWeapon: String){
+        while (true){
+        println("\n=====BATTLE=====\n")
+        println("==========${enemy.name}==========")
+            println("HEALTH: ${enemy.health}\t\tDAMAGE: ${enemy.damage}\nDEFENSE: ${enemy.defense}\t\tWEAPON: $enemyWeapon\n")
+        println("==========${player.name}==========")
+            println("HEALTH: ${player.health}\t\tDAMAGE: ${player.damage}\nDEFENSE: ${player.defense}\t\tWEAPON: $playerWeapon\n")
+            break
+        }
     }
 }
