@@ -1,17 +1,20 @@
-class Player : Character(){
-    override var name: String? = null
-    override var health: Int? = 100
-    override var damage: Int? = null
-    override var defense: Int? = null
+class Player(
+    override var name: String?,
+    override var health: Int?,
+    override var baseDamage: Int?,
+    override var baseHealth: Int?,
+    override var type: String?
+) : Character(){
 
-    override fun display() {
-        println("=====PLAYER=====\nName: $name\nHealth: $health\nDamage: $damage\nDefense: $defense")
+    override fun displayChar() {
+        TODO("Not yet implemented")
     }
 
-    override fun makeChar() {
-        println("\n=====CHAR PLAYER=====")
-        val username = checkNullOrBlank("Masukkan Nama Anda: ")
-        name = username
-        display()
+    override fun filteringChar() {
+        name = makeChar()
+
     }
+
+
+
 }

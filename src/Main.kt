@@ -1,34 +1,23 @@
 fun main() {
-    val choice = checkYesOrNo("Ingin bermain simulasi game RPG? (y/n) ")
-    if (!choice){
-        println("\nTERIMA KASIH!")
-        return
-    } else {
-        //make acc
-        val player1 = Player()
-        val enemy = Enemy()
-        player1.makeChar()
-        enemy.makeChar()
-        while (true) {
-            val startCheck = checkYesOrNo("Mulai? ")
-            if (!startCheck){
-                println("TERIMA KASIH!")
-                return
-            } else {
-                val gameFlow = GameFlow(player1, enemy)
-                gameFlow.start()
-                return
+    while (true) {
+        var yesNoStart = checkYesOrNo("Ingin bermain Game Simulasi RPG? ")
+        if (!yesNoStart) {
+            println("Thanks!!")
+            return
+        } else {
+            val player = Player(null, null, null, null, null)
+            player.filteringChar()
 
-            }
         }
-
     }
+
+
 }
-fun checkYesOrNo(text: String): Boolean {
+fun checkYesOrNo(text: String): Boolean{
     print(text)
     var choice = readln()
-    while (!choice.equals("y", true) && !choice.equals("n", true)) {
-        println("ERROR! TOLONG ISI DENGAN BENAR!")
+    while (!choice.equals("y", true) && !choice.equals("n", true)){
+        println("\nERROR! Tolong input dengan benar!\n!")
         print(text)
         choice = readln()
     }
@@ -38,8 +27,9 @@ fun checkNullOrBlank(text: String): String{
     print(text)
     var input = readln()
     while (input.isBlank()){
-        println("ERROR! TOLONG ISI  DENGAN BENAR!")
+        println("\nERROR! Tolong input dengan benar!\n")
+        print(text)
         input = readln()
     }
-    return input.uppercase()
+    return input
 }
