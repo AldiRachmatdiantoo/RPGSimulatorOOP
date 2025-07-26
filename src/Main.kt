@@ -6,7 +6,7 @@ fun main() {
             return
         } else {
             val player = Player(null, null, null, null, null)
-            player.filteringChar()
+            player.makeChar(player)
 
         }
     }

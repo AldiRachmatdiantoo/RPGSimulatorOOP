@@ -13,8 +13,7 @@ class Player(
     }
 
     override fun filteringChar() {
-        val chooseName = makeChar()
-        val chooseType = makeType()
+        super.makeChar()
 
     }
 
