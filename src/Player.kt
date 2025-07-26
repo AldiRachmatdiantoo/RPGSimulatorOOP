@@ -12,6 +12,8 @@ class Player(
 
     override fun filteringChar() {
         name = makeChar()
+        type = makeType()
+
 
     }
 

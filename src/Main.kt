@@ -1,6 +1,6 @@
 fun main() {
     while (true) {
-        var yesNoStart = checkYesOrNo("Ingin bermain Game Simulasi RPG? ")
+        val yesNoStart = checkYesOrNo("Ingin bermain Game Simulasi RPG? ")
         if (!yesNoStart) {
             println("Thanks!!")
             return
@@ -32,4 +32,22 @@ fun checkNullOrBlank(text: String): String{
         input = readln()
     }
     return input
+}
+fun checkFilterList(list: MutableList<String>, text: String): String{
+    while (true){
+    for ((index, value) in list.withIndex()){
+        println("${index+1}.$value")
+    }
+    print(text)
+    val input = readln().lowercase()
+        if (list.any {it == input}){
+            return input
+        } else {
+            println("Maaf, Type tidak ada!")
+            continue
+        }
+    }
+
+
+
 }

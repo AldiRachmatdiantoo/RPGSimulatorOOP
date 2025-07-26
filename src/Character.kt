@@ -15,7 +15,7 @@ abstract class Character {
     fun makeType(): String? {
         val listType = mutableListOf("strength", "magic")
 
-        type = checkNullOrBlank("Pilih type yang anda inginkan: ")
+        type = checkFilterList(listType,"Pilih type yang anda inginkan: ")
         println("Anda memilih $type type!")
         return type
     }
