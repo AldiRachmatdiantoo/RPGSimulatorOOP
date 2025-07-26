@@ -6,6 +6,7 @@ abstract class Character {
     abstract var type: String?
     abstract fun displayChar()
     abstract fun filteringChar()
+    abstract var weapon: String?
 
     fun makeChar(): String? {
         name = checkNullOrBlank("Masukkan name: ")
@@ -14,9 +15,19 @@ abstract class Character {
     }
     fun makeType(): String? {
         val listType = mutableListOf("strength", "magic")
-
         type = checkFilterList(listType,"Pilih type yang anda inginkan: ")
         println("Anda memilih $type type!")
-        return type
+
+        when(type){
+            "strength" -> {
+
+            }
+        }
+    }
+    fun chooseWeaponStrength(){
+
+    }
+    fun chooseWeaponMagic(){
+
     }
 }

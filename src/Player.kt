@@ -6,14 +6,15 @@ class Player(
     override var type: String?
 ) : Character(){
 
+    override var weapon: String? = "None"
+
     override fun displayChar() {
         TODO("Not yet implemented")
     }
 
     override fun filteringChar() {
-        name = makeChar()
-        type = makeType()
-
+        val chooseName = makeChar()
+        val chooseType = makeType()
 
     }
 
