@@ -1,7 +1,7 @@
 class MakeChar() {
-    var username: String? = null
-    var type: String? = null
-    var weapon: String? = null
+    lateinit var username: String
+    lateinit var type: String
+    lateinit var weapon: String
     var health: Int? = 100
     var level: Int? = 1
     var damage: Int? = 10

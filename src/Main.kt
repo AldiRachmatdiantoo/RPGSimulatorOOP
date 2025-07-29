@@ -18,7 +18,7 @@ fun checkYesOrNo(text: String) : Boolean{
     }
     return choice.equals("y", true)
 }
-fun checkNullOrBlank(text: String): String? {
+fun checkNullOrBlank(text: String): String {
     print(text)
     var input = readln()
     while (input.isBlank()){
