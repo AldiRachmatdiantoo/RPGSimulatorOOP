@@ -40,6 +40,11 @@ class MakeChar() {
         } else {
             val player = CharacterRefactor().createChar(username, type, weapon)
             player.display()
+
+            //bot
+            val makeEnemyChar = MakeEnemyChar().makeEnemyChar()
+            makeEnemyChar.display()
+
         }
     }
 
