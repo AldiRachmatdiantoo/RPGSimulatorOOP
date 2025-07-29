@@ -2,7 +2,7 @@ class CharacterRefactor {
     var health: Int = 100
     var damage: Int = 10
     var level: Int = 1
-    fun createChar(username: String, type: String, weapon: String) : Character{
+    fun createChar(username: String, type: String, weapon: String) : Player{
         when (type) {
             "strength" -> {
                 when (weapon) {

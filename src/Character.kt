@@ -1,10 +1,10 @@
 abstract class Character(
-    var name: String?,
-    var health: Int?,
-    var level: Int?,
-    var damage: Int?,
-    var weapon: String?,
-    var type: String?
+    open var name: String?,
+    open var health: Int?,
+    open var level: Int?,
+    open var damage: Int?,
+    open var weapon: String?,
+    open var type: String?
 ) {
 
     abstract fun display()
