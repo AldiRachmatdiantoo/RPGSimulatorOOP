@@ -1,14 +1,22 @@
 import com.character.MakeChar
 
-fun main() {
-//    Fight().fight("Hai")
-    val toProgram = checkYesOrNo("Ingin bermain Simulasi Game RPG?")
-    if (!toProgram) {
-        println("Terima Kasih!")
-        return
-    } else {
-        MakeChar().start()
+fun main(){
 
+        var toProgram = checkYesOrNo("Ingin bermain Simulasi Game RPG? ")
+        while (true) {
+        if (!toProgram) {
+            println("Terima Kasih!")
+            break
+        } else {
+            MakeChar().start()
+            toProgram = checkYesOrNo("Ingin bermain Simulasi Game RPG Lagi? ")
+            if (!toProgram){
+                println("TERIMA KASIH SUDAH BERMAIN!")
+                break
+            } else {
+                continue
+            }
+        }
     }
 }
 fun checkYesOrNo(text: String) : Boolean{

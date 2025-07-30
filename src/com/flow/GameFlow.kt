@@ -17,11 +17,11 @@ class GameFlow(val player: Player, val enemy: Enemy) {
             val toMenu = Menu().checkMenuList(enemy, player)
             if(!toMenu) break
             if (player.health == 0) {
-                println("${player.name} Lost!")
+                println("==========${player.name} LOSE!==========")
                 break
             }
             else if(enemy.health == 0){
-                println("${player.name} Win!")
+                println("==========${player.name} WIN!==========")
                 break
             }
         }
