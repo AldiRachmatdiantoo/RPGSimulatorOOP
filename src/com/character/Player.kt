@@ -1,4 +1,6 @@
-class Enemy(name: String?,
+package com.character
+
+class Player(name: String?,
              health: Int?,
              level: Int?,
              damage: Int?,
@@ -14,11 +16,12 @@ class Enemy(name: String?,
     type
 ) {
     override fun display() {
-        println("=====ENEMY=====")
-
+        println("=====MY CHARACTER=====")
         println(
             "Name: ${name}\t\tHealth: $health\t\tLevel: $level" +
                     "\nDamage: $damage\t\tType: $type\t\tWeapon: $weapon"
         )
     }
+
+
 }

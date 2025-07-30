@@ -1,3 +1,5 @@
+import com.character.MakeChar
+
 fun main() {
     val toProgram = checkYesOrNo("Ingin bermain Simulasi Game RPG?")
     if (!toProgram) {
@@ -30,7 +32,7 @@ fun checkNullOrBlank(text: String): String {
 }
 fun checkFilterList(text: String, list: MutableList<String>): String{
     while (true) {
-        println("\n===============")
+        println("\n\n===============")
         for ((index, value) in list.withIndex()) {
             println("${index + 1}.$value")
         }

@@ -1,3 +1,10 @@
+package com.character
+
+import checkFilterList
+import checkNullOrBlank
+import checkYesOrNo
+import com.flow.GameFlow
+
 class MakeChar() {
     lateinit var username: String
     lateinit var type: String

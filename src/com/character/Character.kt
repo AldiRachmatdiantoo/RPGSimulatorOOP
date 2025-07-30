@@ -1,3 +1,5 @@
+package com.character
+
 abstract class Character(
     open var name: String?,
     open var health: Int?,

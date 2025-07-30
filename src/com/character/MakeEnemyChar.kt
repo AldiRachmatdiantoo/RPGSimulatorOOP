@@ -1,3 +1,5 @@
+package com.character
+
 import kotlin.random.Random
 
 class MakeEnemyChar {
@@ -9,7 +11,7 @@ class MakeEnemyChar {
     lateinit var type: String
     lateinit var weapon: String
 
-    fun makeEnemyChar(): Enemy{
+    fun makeEnemyChar(): Enemy {
         val listName = mutableListOf("diana", "felli", "keysha", "robert", "ethan")
         val listType = mutableListOf("strength", "magic")
         val listStrengthWeapon = mutableListOf("swords", "bow", "shield")
