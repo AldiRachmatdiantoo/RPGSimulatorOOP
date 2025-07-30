@@ -16,12 +16,14 @@ class GameFlow(val player: Player, val enemy: Enemy) {
             player.display()
             val toMenu = Menu().checkMenuList(enemy, player)
             if(!toMenu) break
+            if (player.health == 0) {
+                println("${player.name} Lost!")
+                break
+            }
+            else if(enemy.health == 0){
+                println("${player.name} Win!")
+                break
+            }
         }
     }
-
-
 }
-//1.Cek Status com.character.Enemy
-//2.Attack com.character.Enemy
-//3.Defense
-//4.Gave up

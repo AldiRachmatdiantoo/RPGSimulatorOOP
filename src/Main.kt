@@ -1,6 +1,7 @@
 import com.character.MakeChar
 
 fun main() {
+//    Fight().fight("Hai")
     val toProgram = checkYesOrNo("Ingin bermain Simulasi Game RPG?")
     if (!toProgram) {
         println("Terima Kasih!")

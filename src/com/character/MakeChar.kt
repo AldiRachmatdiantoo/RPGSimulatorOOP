@@ -24,7 +24,7 @@ class MakeChar() {
             type = checkFilterList("Pilih Type: ", typeChar)
             when(type){
                 "strength" -> {
-                    listWeapon = mutableListOf("swords", "bow", "shield")
+                    listWeapon = mutableListOf("swords", "bow", "gun")
                 }
                 "magic" -> {
                     listWeapon = mutableListOf("wand", "magic ring", "gauntlet")
