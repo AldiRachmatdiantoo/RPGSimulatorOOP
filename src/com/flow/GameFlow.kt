@@ -15,9 +15,7 @@ class GameFlow(val player: Player, val enemy: Enemy) {
             println("===============\n")
             player.display()
             val toMenu = Menu().checkMenuList(enemy, player)
-            if(!toMenu){
-                break
-            }
+            if(!toMenu) break
         }
     }
 
